@@ -11,11 +11,9 @@ class Garage: Property{
         super.init(square: square, cost: cost, address: address)
     }
     
-    override func changeCost() {
-        var newCost = 0
-        let randomCost = Int.random(in: 1500...5000)
-        newCost = cost + randomCost
-        print("\nГараж. \nМашина внутри - \(carInside). \nПодвал - \(basement). \nПлощадь - \(square). \nСтарая стоимость - \(cost) \nНовая стоимость - \(newCost). \nАдрес - \(address)")
+    override func changeCost(cost: Int) {
+        print("\nГараж.\nСтарая стоимость - \(self.cost) \nНовая стоимость - \(cost)\nМашина внутри - \(carInside). \nПодвал - \(basement).")
+        self.cost = cost
     }
     
     override func showAllinfo() {

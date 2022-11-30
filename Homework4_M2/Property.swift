@@ -15,11 +15,9 @@ class Property{
         self.address = address
     }
     
-    func changeCost(){
-        var newCost = 0
-        let randomCost = Int.random(in: 1500...5000)
-        newCost = cost + randomCost
-        print("\nНедвижимость. \nПлощадь - \(square). \nСтарая стоимость - \(cost) \nНовая стоимость - \(newCost). \nАдрес - \(address)")
+    func changeCost(cost: Int){
+        print("\nНедвижимость.\nСтарая стоимость - \(self.cost) \nНовая стоимость - \(cost).")
+        self.cost = cost
     }
     
     func showAllinfo(){
